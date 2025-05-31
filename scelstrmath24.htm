@@ -17111,8 +17111,8 @@ function loadtestfun(form) {
   form.scelbal_code.value += "20 PRINT LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2;' NEARLY = 0 BECAUSE'\n";
   form.scelbal_code.value += "30 PRINT 'LOG(EXP(1)) =';LOG(EXP(1));', ATN(1)=';ATN(1);' NEARLY = PI/4,'\n";
   form.scelbal_code.value += "40 PRINT 'AND SIN OR COS OF THAT ANGLE =';SQR(.5);\n";
-  form.scelbal_code.value += "50 PRINT ', WHICH SQUARED IS NEARLY .5; RESULT ';\n";
-  form.scelbal_code.value += "60 PRINT 'GOOD TO ';-LOG(LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2)/LOG(2);\n";
+  form.scelbal_code.value += "50 PRINT ', WHICH SQUARED IS NEARLY .5; RESULT GOOD TO';\n";
+  form.scelbal_code.value += "60 PRINT-LOG(LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2)/LOG(2);\n";
   form.scelbal_code.value += "70 PRINT ' BITS'\n";
 }
    
