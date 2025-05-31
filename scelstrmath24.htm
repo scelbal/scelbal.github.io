@@ -17126,7 +17126,7 @@ function loadfact(form) {
   form.scelbal_code.value +=  "80  IF E2<>0 THEN F$=F$+CHR$(176+E2)\n";
   form.scelbal_code.value +=  "85  F$=F$+CHR$(176+E1)\n";
   form.scelbal_code.value +=  "88  F$=F$+CHR$(176+FE)\n";
-  form.scelbal_code.value +=  "89  PRINT F$;\n";
+  form.scelbal_code.value +=  "89  PRINT F$+' ';\n";
   form.scelbal_code.value +=  "90  IF I=INT(I/5)*5 THEN INPUT M$\n";
   form.scelbal_code.value +=  "92  IF LEN(M$)>0 THEN END\n";
   form.scelbal_code.value +=  "94  PRINT\n";
