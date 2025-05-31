@@ -8,23 +8,45 @@
 </HEAD>
 <BODY LANG="en-US" DIR="LTR">
 <P>
-  SCELBAL was the first (1974-75) and only open-source, floating-point (BASIC-like) language for the 8008, Intel's first 8-bit microprocessor.  
-  The purpose of this site is to preserve a machine-executable record of what programming an early personal computer was like. 
+  SCELBAL was the first (1974-75) and only open-source, floating-point, BASIC-like language for the 8008, Intel's first 8-bit microprocessor.  
+  The purpose of this site is to preserve a machine-executable version of SCELBAL to show what programming an early personal computer was like. 
   Because of the similarity of the 8080 instruction set, SCELBAL was also available for that processor, 
   making SCELBAL the first competitor to Bill Gates and Paul Allen's Altair BASIC.
-  The source code was distributed (1976) in book form (at publication cost, $50) by Scelbi Computer Consulting,
+  The source code of SCELBAL was distributed (1976) in book form (at publication cost, $50) by Scelbi Computer Consulting,
   making it an early example of open-source personal computer software,
-  in contrast to the high price charged for the source to Altair BASIC.
-  The authors of the book, <i>SCELBAL: A Higher Level Language for 8008/8080 Systems</i> are 
+  in contrast to the high price charged for the source of Altair BASIC.
+  The authors of the book, <i>SCELBAL: A Higher Level Language for 8008/8080 Systems</i>, are 
   the late Nat Wadsworth (founder of Scelbi) and Mark G. Arnold (MGA), who created this site a half-century later.
   Nat wrote the floating-point package (also open-sourced and published separately in <i>Machine Language Programming for the 8008 and Similar Microprocessors</i>); 
   MGA wrote the rest of SCELBAL.
 </P>
 
 <p> This github site hosts a few variations of an 8008 simulator written in Javascript that run different versions of SCELBAL.  
- To save typing, several interesting SCELBAL programs 
-  can be selected by clicking on a link; once SCELBAL is running, you can simply type LOAD to bring the program into emulated memory 
-  (similar to the LOAD command of that era, which loaded programs from magnetic cassette tape).
+	The Javascript is a direct transliteration of 
+	SCELBAL code that emulates the 8008 (as can be seen by viewing the js source). 
+	The link(s) below emulate enough of the 8008 instruction set to run these versions of SCELBAL 
+	(the emulator lacks the parity flag and the restart instruction, neither of which SCELBAL needs):
+</p>
+
+<p>
+  <a href="https://scelbal.github.io/scel24.htm"> https://scelbal.github.io/scel24.htm</a> emulates the minimal (8K) published version 
+  (with bug patches) that offers floating-point variables, one-dimensional arrays and square root, 
+  but does not implement strings or transcendental functions.    
+</p>
+
+<p> Some hints:
+ 
+	To start SCELBAL, click the "RUN" button.  The output appears in a js prompt (if more than fits in the js prompt, hitting enter will scroll
+	--an artifact of this emulator not the original behavior.)  Normally hitting enter (or clicking OK) will continue interaction with SCELBAL.
+	Hitting CANCEL will pause SCELBAL; all the output will have been saved in the CONSOLE OUTPUT).
+	Like other software of the era, SCELBAL expects all upper case input (caps locks will make interaction more convienent).
+	To save typing, several interesting SCELBAL programs can be selected by clicking on a link; 
+	once SCELBAL is running, you can simply type LOAD to bring the program into emulated memory 
+	(similar to the LOAD command of that era, which loaded programs from magnetic cassette tape).
+	One of these SCELBAL programs ("sim8") is the 8008 simulator running under SCELBAL 
+	(Because the js source was derived from this, it is close to a demonstration of the universality of the 8008 and SCELBAL as a general-purpose computer).
+	Others programs: list primes less than 1000; print the Mandelbrot set; compute the gcd; and solve simultanous equations.
+ 
   The link(s) below emulate enough of the instruction set of Intel's first 8-bit microprocessor, the 8008, to run these versions of SCELBAL:
 </p>
 
@@ -34,16 +56,40 @@
   but does not implement strings or transcendental functions.    
 </p>
 
+	
 <p> 
 	The history of Scelbi is documented at: <a href="https://www.scelbi.com"> https://www.scelbi.com</a>. 
 	A summary can be found at <a href="https://en.wikipedia.org/wiki/SCELBAL"> https://en.wikipedia.org/wiki/SCELBAL</a>
-	A downloadable emulator for iOS that runs SCELBAL with a more accurate look and feel can be found at <a href="https://www.willegal.net/scelbi/the8008andScelbi.html"> 
+	An iOS downloadable emulator (for the 8008-based Scelbi 8B) that runs SCELBAL with a more accurate look and feel can be found at <a href="https://www.willegal.net/scelbi/the8008andScelbi.html"> 
 		https://www.willegal.net/scelbi/the8008andScelbi.html</a>.
 	A modern hobbyist hardware implementation, the "Retroshield8008" 
 	(<a href="https://8bitforce.com/img/k8008presentation/RetroShieldSummary_20250329a.pdf"> https://8bitforce.com/img/k8008presentation/RetroShieldSummary_20250329a.pdf</a>)
 	uses a vintage 8008 chip but otherwise modern components and is preloaded with SCELBAL.
 	This website was derived from <a href="http://www.xlnsresearch.com/scelbal.htm"> http://www.xlnsresearch.com/scelbal.htm </a>,
-	which is likely to become unavailable in the future.  
+	which is likely to become unavailable in the future. 
+<p>
+	MGA requests the following appear in any derivative works:
 </p>
+	
+<p>SCELBAL, the only open-source, floating-point, high-level language ever
+implemented on the 8008, was published in book form:</p>
+
+<p>
+   SCELBAL: A Higher-Level Language for 8008/8080 Systems
+            by Mark G. Arnold (MGA) and Nat Wadsworth
+   (c)1975-78 Scelbi Computer Consulting,Inc. All Rights Reserved
+</p>
+	
+<p>MGA created this simulator (4/2012) and gives permission to use
+SCELBAL in it for educational, historical, non-commercial purposes,
+with the understanding no warranty is expressed or implied.
+As stated in the original, 'no responsibility is assumed for
+inaccuracies or for the success or failure of various applications
+to which the information herein may be applied.'
+This message must appear in any version of SCELBAL downloaded,
+distributed, posted or disseminated.
+</p>	
+
+	
 </BODY>
 </HTML>
