@@ -40,9 +40,13 @@
 	--an artifact of this emulator not the original behavior.)  Normally hitting enter (or clicking OK) will continue interaction with SCELBAL.
 	Hitting CANCEL will pause SCELBAL; all the output will have been saved in the CONSOLE OUTPUT).
 	Like other software of the era, SCELBAL expects all upper case input (caps locks will make interaction more convienent).
-	To save typing, several interesting SCELBAL programs can be selected by clicking on a link; 
+	BASICs of this era use something like the Read-Eval-Print-Loop (REPL) of a modern command-line IDE like Python, just a bit more primative.
+	Typing PRINT 2*3+4*5 immediately evaluates the expression and prints the result.
+	Prefacing it with a line number saves the statement in memory to be executed in numerical order (unless altered by statements like IF, GOTO, GOSUB, RETURN or FOR/NEXT).
+	You can LIST this program or SCR (to scratch it and all workspace variables).
+	To save typing, several interesting SCELBAL programs can be selected before starting SCELBAL by clicking on a link; 
 	once SCELBAL is running, you can simply type LOAD to bring the program into emulated memory 
-	(similar to the LOAD command of that era, which loaded programs from magnetic cassette tape).
+	(similar to the LOAD command of that era, which loaded programs from magnetic cassette tape) and the type RUN.
 	One of these SCELBAL programs ("sim8") is the 8008 simulator running under SCELBAL 
 	(Because the js source was derived from this, it is close to a demonstration of the universality of the 8008 and SCELBAL as a general-purpose computer).
 	Others programs: list primes less than 1000; print the Mandelbrot set; compute the gcd; and solve simultanous equations.
@@ -62,15 +66,11 @@
 </p>
 	
 <p>SCELBAL, the only open-source, floating-point, high-level language ever
-implemented on the 8008, was published in book form:</p>
-
-<p>
+implemented on the 8008, was published in book form:
    SCELBAL: A Higher-Level Language for 8008/8080 Systems
             by Mark G. Arnold (MGA) and Nat Wadsworth
    (c)1975-78 Scelbi Computer Consulting,Inc. All Rights Reserved
-</p>
-	
-<p>MGA created this simulator (4/2012) and gives permission to use
+MGA created this simulator (4/2012) and gives permission to use
 SCELBAL in it for educational, historical, non-commercial purposes,
 with the understanding no warranty is expressed or implied.
 As stated in the original, 'no responsibility is assumed for
