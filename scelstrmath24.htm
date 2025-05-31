@@ -17108,29 +17108,29 @@ function loadgcf(form) {
 function loadfact(form) {
   console.log("loading 100!");
   form.scelbal_code.value =  "5 REM UP TO 100! ACCURATE VIA LOG & STR; FP FAILS 35!\n";
-  form.scelbal_code.value =  "10 F=0\n";
-  form.scelbal_code.value =  "13 P=1\n";
-  form.scelbal_code.value =  "15 L0=LOG(10)\n";
-  form.scelbal_code.value =  "17 PRINT 'N','N! VIA FP','N! VIA LOG'\n";
-  form.scelbal_code.value =  "20 FOR I=2 TO 100\n";
-  form.scelbal_code.value =  "25  P=P*I\n";
-  form.scelbal_code.value =  "30  F=F+LOG(I)/L0\n";
-  form.scelbal_code.value =  "40  FE=INT(F)\n";
-  form.scelbal_code.value =  "45  FM=F-FE\n";
-  form.scelbal_code.value =  "50  PRINT I,P,EXP(L0*FM);\n";
-  form.scelbal_code.value =  "55  E2=INT(FE/100)\n";
-  form.scelbal_code.value =  "60  FE=FE-E2*100\n";
-  form.scelbal_code.value =  "65  E1=INT(FE/10)\n";
-  form.scelbal_code.value =  "70  FE=FE-E1*10\n";
-  form.scelbal_code.value =  "75  F$='E'\n";
-  form.scelbal_code.value =  "80  IF E2<>0 THEN F$=F$+CHR$(176+E2)\n";
-  form.scelbal_code.value =  "85  F$=F$+CHR$(176+E1)\n";
-  form.scelbal_code.value =  "88  F$=F$+CHR$(176+FE)\n";
-  form.scelbal_code.value =  "89  PRINT F$;\n";
-  form.scelbal_code.value =  "90  IF I=INT(I/5)*5 THEN INPUT M$\n";
-  form.scelbal_code.value =  "92  IF LEN(M$)>0 THEN END\n";
-  form.scelbal_code.value =  "94  PRINT\n";
-  form.scelbal_code.value =  "95 NEXT I\n";
+  form.scelbal_code.value +=  "10 F=0\n";
+  form.scelbal_code.value +=  "13 P=1\n";
+  form.scelbal_code.value +=  "15 L0=LOG(10)\n";
+  form.scelbal_code.value +=  "17 PRINT 'N','N! VIA FP','N! VIA LOG'\n";
+  form.scelbal_code.value +=  "20 FOR I=2 TO 100\n";
+  form.scelbal_code.value +=  "25  P=P*I\n";
+  form.scelbal_code.value +=  "30  F=F+LOG(I)/L0\n";
+  form.scelbal_code.value +=  "40  FE=INT(F)\n";
+  form.scelbal_code.value +=  "45  FM=F-FE\n";
+  form.scelbal_code.value +=  "50  PRINT I,P,EXP(L0*FM);\n";
+  form.scelbal_code.value +=  "55  E2=INT(FE/100)\n";
+  form.scelbal_code.value +=  "60  FE=FE-E2*100\n";
+  form.scelbal_code.value +=  "65  E1=INT(FE/10)\n";
+  form.scelbal_code.value +=  "70  FE=FE-E1*10\n";
+  form.scelbal_code.value +=  "75  F$='E'\n";
+  form.scelbal_code.value +=  "80  IF E2<>0 THEN F$=F$+CHR$(176+E2)\n";
+  form.scelbal_code.value +=  "85  F$=F$+CHR$(176+E1)\n";
+  form.scelbal_code.value +=  "88  F$=F$+CHR$(176+FE)\n";
+  form.scelbal_code.value +=  "89  PRINT F$;\n";
+  form.scelbal_code.value +=  "90  IF I=INT(I/5)*5 THEN INPUT M$\n";
+  form.scelbal_code.value +=  "92  IF LEN(M$)>0 THEN END\n";
+  form.scelbal_code.value +=  "94  PRINT\n";
+  form.scelbal_code.value +=  "95 NEXT I\n";
 }
 
 
