@@ -17107,6 +17107,7 @@ function loadplot(form) {
   console.log("loading plot");
   form.scelbal_code.value =  "10 PRINT 'FUNCTION TO PRINT:';\n";
   form.scelbal_code.value += "15 INPUT F$\n";
+  form.scelbal_code.value += "17 IF F$='EXP' THEN F$='EXPH'\n";
   form.scelbal_code.value += "20 L$(1)='     '\n";
   form.scelbal_code.value += "30 GOSUB 300\n";
   form.scelbal_code.value += "40 FOR I=1 TO 9\n";
@@ -17118,6 +17119,7 @@ function loadplot(form) {
   form.scelbal_code.value += "90 L$(1)=L$(2)\n";
   form.scelbal_code.value += "100 FOR X=1 TO 40\n";
   form.scelbal_code.value += "105 X0=(X-20)/20*5\n";
+  form.scelbal_code.value += "109 IF F$='EXPH' THEN Y0=EXP(X0)/100\n";
   form.scelbal_code.value += "110 IF F$='ATN' THEN Y0=ATN(X0)\n";
   form.scelbal_code.value += "111 IF F$='SINH' THEN Y0=(EXP(X0)-EXP(-X0))/100\n";
   form.scelbal_code.value += "112 IF F$='SIN' THEN Y0=SIN(X0)\n";
