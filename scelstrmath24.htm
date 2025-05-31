@@ -17105,6 +17105,17 @@ function loadgcf(form) {
 
 
    
+function loadtestfun(form) {
+  console.log("loading testfun");
+  form.scelbal_code.value =  "10 PRINT 'TEST FUNS: LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2 ='\n";
+  form.scelbal_code.value += "20 PRINT LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2;' NEARLY = 0 BECAUSE'\n";
+  form.scelbal_code.value += "30 PRINT 'LOG(EXP(1)) =';LOG(EXP(1));', ATN(1)=';ATN(1);' NEARLY = PI/4,'\n";
+  form.scelbal_code.value += "40 PRINT 'AND SIN OR COS OF THAT ANGLE =';SQR(.5);\n";
+  form.scelbal_code.value += "50 PRINT ', WHICH SQUARED IS NEARLY .5; RESULT ';\n";
+  form.scelbal_code.value += "60 PRINT 'GOOD TO ';-LOG(LOG(EXP(1))-SIN(ATN(1))^2-COS(ATN(1))^2)/LOG(2);\n";
+  form.scelbal_code.value += "70 PRINT ' BITS'\n";
+}
+   
 function loadfact(form) {
   console.log("loading 100!");
   form.scelbal_code.value =  "5 REM UP TO 100! ACCURATE VIA LOG & STR; FP FAILS 35!\n";
@@ -17159,6 +17170,7 @@ produce_listing;if (!produce_listing) {form.list_button.value=&#39;Trace On&#39;
      <input name="mandel_button" value="load prime" onclick="loadprime(form);" align="middle" type="button">
      <input name="gcf_button" value="load gcf" onclick="loadgcf(form);" align="middle" type="button">
      <input name="fact_button" value="load 100!" onclick="loadfact(form);" align="middle" type="button">
+     <input name="testfun_button" value="load testfun" onclick="loadtestfun(form);" align="middle" type="button">
      <br>
      <textarea name="scelbal_code" rows="7" cols="72">
      </textarea>
