@@ -17133,6 +17133,7 @@ function loadplot(form) {
   form.scelbal_code.value += "118 IF L$(Y:X;1)='.' THEN P$=':'\n";
   form.scelbal_code.value += "120 L$(Y)=L$(Y:1;X-1)+P$+L$(Y:X+1)\n";
   form.scelbal_code.value += "130 NEXT X\n";
+  form.scelbal_code.value += "140 IF F$='TANH' THEN F$=F$(:1;3)\n";
   form.scelbal_code.value += "200 FOR Y=8 TO 1 STEP -1\n";
   form.scelbal_code.value += "210 PRINT L$(Y);\n";
   form.scelbal_code.value += "215 IF LEN(F$)=4 THEN PRINT INT(500*((Y-1)/2.6-1.4))/10+2.5\n";
