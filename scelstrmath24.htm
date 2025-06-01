@@ -17141,7 +17141,7 @@ function loadplot(form) {
   form.scelbal_code.value += "215 IF LEN(F$)=4 THEN PRINT INT(500*((Y-1)/2.6-1.4))/10+2.5\n";
   form.scelbal_code.value += "220 IF LEN(F$)=3 THEN PRINT INT(10*((Y-1)/2.6-1.4))/10-.05\n";
   form.scelbal_code.value += "225 NEXT Y\n";
-  form.scelbal_code.value += "230 END\n";
+  form.scelbal_code.value += "230 GOTO 10\n";
   form.scelbal_code.value += "300 FOR I=1 TO 3\n";
   form.scelbal_code.value += "310 L$(1)=L$(1)+L$(1)\n";
   form.scelbal_code.value += "320 NEXT I\n";
