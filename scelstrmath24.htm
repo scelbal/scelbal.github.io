@@ -17106,7 +17106,7 @@ function loadgcf(form) {
 function loadplot(form) {
   console.log("loading plot");
   form.scelbal_code.value =  "10 PRINT 'FUNCTION TO PLOT:';\n";
-  form.scelbal_code.value += "15 INPUT F$\n";
+  form.scelbal_code.value += "15 GOSUB 500\n";
   form.scelbal_code.value += "17 IF F$='EXP' THEN F$='EXPH'\n";
   form.scelbal_code.value += "20 L$(1)='     '\n";
   form.scelbal_code.value += "30 GOSUB 300\n";
@@ -17150,6 +17150,20 @@ function loadplot(form) {
   form.scelbal_code.value += "410 L$(5)=L$(5:1;X-1)+'!'+L$(5:X+1)\n";
   form.scelbal_code.value += "420 NEXT X\n";
   form.scelbal_code.value += "430 RETURN\n";
+  form.scelbal_code.value += "500 INPUT F$\n";
+  form.scelbal_code.value += "502 IF F$='QUIT' THEN END\n";
+  form.scelbal_code.value += "505 IF F$='TAN' THEN RETURN\n";
+  form.scelbal_code.value += "510 IF F$='TANH' THEN RETURN\n";
+  form.scelbal_code.value += "515 IF F$='EXP' THEN RETURN\n";
+  form.scelbal_code.value += "520 IF F$='ATN' THEN RETURN\n";
+  form.scelbal_code.value += "525 IF F$='SINH' THEN RETURN\n";
+  form.scelbal_code.value += "530 IF F$='SIN' THEN RETURN\n";
+  form.scelbal_code.value += "535 IF F$='COSH' THEN RETURN\n";
+  form.scelbal_code.value += "540 IF F$='COS' THEN RETURN\n";
+  form.scelbal_code.value += "580 PRINT 'CHOOSE SIN,SINH,COS,COSH,'\n";
+  form.scelbal_code.value += "585 PRINT '       TAN,TANH,EXP,ATN OR QUIT'\n";
+  form.scelbal_code.value =  "590 PRINT 'FUNCTION TO PLOT:';\n";
+  form.scelbal_code.value += "595 GOTO 500\n";
 }
    
 function loadtestfun(form) {
