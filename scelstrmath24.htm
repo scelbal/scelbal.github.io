@@ -17134,6 +17134,7 @@ function loadplot(form) {
   form.scelbal_code.value += "119  IF L$(Y:X;1)='.' THEN P$=':'\n";
   form.scelbal_code.value += "120 L$(Y)=L$(Y:1;X-1)+P$+L$(Y:X+1)\n";
   form.scelbal_code.value += "130 NEXT X\n";
+  form.scelbal_code.value += "135 GOSUB 400\n";
   form.scelbal_code.value += "140 IF F$='TANH' THEN F$=F$(:1;3)\n";
   form.scelbal_code.value += "200 FOR Y=8 TO 1 STEP -1\n";
   form.scelbal_code.value += "210 PRINT L$(Y);\n";
@@ -17145,6 +17146,10 @@ function loadplot(form) {
   form.scelbal_code.value += "310 L$(1)=L$(1)+L$(1)\n";
   form.scelbal_code.value += "320 NEXT I\n";
   form.scelbal_code.value += "330 RETURN\n";
+  form.scelbal_code.value += "400 FOR X=3 TO 40 STEP 4\n";
+  form.scelbal_code.value += "410 L$(5)=L$(5:1;X-1)+'!'+L$(5:X+1)\n";
+  form.scelbal_code.value += "420 NEXT X\n";
+  form.scelbal_code.value += "430 RETURN\n";
 }
    
 function loadtestfun(form) {
