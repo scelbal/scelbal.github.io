@@ -17130,7 +17130,8 @@ function loadplot(form) {
   form.scelbal_code.value += "115 Y=INT((Y0+1.6)*2.6)+1\n";
   form.scelbal_code.value += "116 IF (Y>0)*(Y<10)=0 THEN Y=9\n";
   form.scelbal_code.value += "117 P$='.'\n";
-  form.scelbal_code.value += "118 IF L$(Y:X;1)='.' THEN P$=':'\n";
+  form.scelbal_code.value += "118 IF Y0<0 GOTO 120\n";
+  form.scelbal_code.value += "119  IF L$(Y:X;1)='.' THEN P$=':'\n";
   form.scelbal_code.value += "120 L$(Y)=L$(Y:1;X-1)+P$+L$(Y:X+1)\n";
   form.scelbal_code.value += "130 NEXT X\n";
   form.scelbal_code.value += "140 IF F$='TANH' THEN F$=F$(:1;3)\n";
