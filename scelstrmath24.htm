@@ -17119,6 +17119,8 @@ function loadplot(form) {
   form.scelbal_code.value += "90 L$(1)=L$(2)\n";
   form.scelbal_code.value += "100 FOR X=1 TO 40\n";
   form.scelbal_code.value += "105 X0=(X-20)/20*5\n";
+  form.scelbal_code.value += "107 IF F$='TAN' THEN Y0=SIN(X0)/COS(X0)\n";
+  form.scelbal_code.value += "108 IF F$='TANH' THEN Y0=(EXP(X0)-EXP(-X0))/(EXP(X0)+EXP(-X0))\n";
   form.scelbal_code.value += "109 IF F$='EXPH' THEN Y0=EXP(X0)/100\n";
   form.scelbal_code.value += "110 IF F$='ATN' THEN Y0=ATN(X0)\n";
   form.scelbal_code.value += "111 IF F$='SINH' THEN Y0=(EXP(X0)-EXP(-X0))/100\n";
@@ -17126,7 +17128,8 @@ function loadplot(form) {
   form.scelbal_code.value += "113 IF F$='COSH' THEN Y0=(EXP(X0)+EXP(-X0))/100\n";
   form.scelbal_code.value += "114 IF F$='COS' THEN Y0=COS(X0)\n";
   form.scelbal_code.value += "115 Y=INT((Y0+1.6)*2.6)+1\n";
-  form.scelbal_code.value += "116 P$='.'\n";
+  form.scelbal_code.value += "116 IF (Y>0)*(Y<10)=0 THEN Y=9\n";
+  form.scelbal_code.value += "117 P$='.'\n";
   form.scelbal_code.value += "118 IF L$(Y:X;1)='.' THEN P$=':'\n";
   form.scelbal_code.value += "120 L$(Y)=L$(Y:1;X-1)+P$+L$(Y:X+1)\n";
   form.scelbal_code.value += "130 NEXT X\n";
