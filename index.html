@@ -43,7 +43,8 @@
  
 	To start SCELBAL, click the "RUN" button.  The output appears in a js prompt (if more than fits in the js prompt, hitting enter will scroll
 	--an artifact of this emulator not the original behavior.)  Normally hitting enter (or clicking OK) will continue interaction with SCELBAL.
-	Hitting CANCEL will pause SCELBAL; all the output will have been saved in the CONSOLE OUTPUT.
+	Clicking on CANCEL will pause SCELBAL; all the output will have been saved in the CONSOLE OUTPUT
+	(but in most browsers, this only updates at the time of the CANCEL).
 	Like other software of the era, SCELBAL expects all upper case input (caps locks will make interaction more convienent).
 	SCELBAL, like other BASICs of this era, use something like the 
 	Read-Eval-Print-Loop (REPL) of a modern command-line IDE like Python, just a bit more primative.
@@ -51,6 +52,9 @@
 	Prefacing it with a line number saves the statement in memory to be executed in numerical order 
 	(unless altered by statements like IF, GOTO, GOSUB, RETURN or FOR/NEXT).
 	You can RUN or LIST this program or SCR (to scratch it and all workspace variables).
+	While a SCELBAL program is running, the js prompt disappears and the 8008 simulator silently generates its output.
+	(unlike the original behavior on vintage hardware).
+	The next js prompt only reappears when an INPUT statement executes or the SCELBAL program finishes.
 	To save typing, several interesting SCELBAL programs can be selected before starting SCELBAL by clicking on a link; 
 	once SCELBAL is running, you can simply type LOAD to bring the program into emulated memory 
 	(similar to the LOAD command of that era, which loaded programs from magnetic cassette tape) and then type RUN.
@@ -58,6 +62,8 @@
 	(Because the js source was derived from this, it is close to a demonstration of the universality of the 8008 and SCELBAL as a general-purpose computer).
 	Others programs: list primes less than 1000; print the Mandelbrot set; compute the gcd; solve simultanous equations; test or
 	plot the math functions, and compute up to 100! using strings and logs.
+	The 8008 simulator is usually faster than the original 8008 chip, but even so, some of these programs (like Mandelbrot)
+	are slow.  Some browsers will prompt to ask if you want it to wait for the 8008 simulator to finish.
  
 <p> 
 	The history of Scelbi is documented at: <a href="https://www.scelbi.com"> https://www.scelbi.com</a>. 
