@@ -17087,21 +17087,54 @@ function loadprime(form) {
   form.scelbal_code.value += "240 PRINT\n";
 }
 
-function loadgcf(form) {
-  console.log("loading gcf");
-  form.scelbal_code.value =  "10 INPUT A,B \n";
-  form.scelbal_code.value += "40 X1=A \n";
-  form.scelbal_code.value += "50 IF A>B GOTO 80 \n";
-  form.scelbal_code.value += "60 X1=B \n";
-  form.scelbal_code.value += "70 B=A \n";
-  form.scelbal_code.value += "80 X2=B \n";
-  form.scelbal_code.value += "90 X3=X2 \n";
-  form.scelbal_code.value += "100 X2=INT(X2*(X1/X2-INT(X1/X2))) \n";
-  form.scelbal_code.value += "110 X1=X3 \n";
-  form.scelbal_code.value += "120 IF X2<>0 GOTO 90 \n";
-  form.scelbal_code.value += "130 PRINT 'GCF IS ';X1 \n";
-  form.scelbal_code.value += "140 GOTO 10 \n";
- }
+function loadfib(form) {
+  console.log("loading fib");
+  form.scelbal_code.value =  "10 REM BIG FIB\n";
+  form.scelbal_code.value += "11 M$=''\n";
+  form.scelbal_code.value += "15 A$='0'\n";
+  form.scelbal_code.value += "20 B$='1'\n";
+  form.scelbal_code.value += "30 FOR K=1 TO 250\n";
+  form.scelbal_code.value += "40  GOSUB 400\n";
+  form.scelbal_code.value += "50  PRINT K,B$;' ';\n";
+  form.scelbal_code.value += "52  IF K-INT(K/5)*5=0 THEN INPUT M$\n";
+  form.scelbal_code.value += "54  IF K-INT(K/5)*5>0 THEN PRINT\n";
+  form.scelbal_code.value += "57  IF LEN(M$)>0 THEN END\n";
+  form.scelbal_code.value += "60  A$=B$\n";
+  form.scelbal_code.value += "70  B$=C$\n";
+  form.scelbal_code.value += "80 NEXT K\n";
+  form.scelbal_code.value += "95 END\n";
+  form.scelbal_code.value += "400 REM ADD\n";
+  form.scelbal_code.value += "405 GOSUB 600\n";
+  form.scelbal_code.value += "410 C$=''\n";
+  form.scelbal_code.value += "415 CY=0\n";
+  form.scelbal_code.value += "420 FOR I=LA TO 1 STEP -1\n";
+  form.scelbal_code.value += "430  GOSUB 500\n";
+  form.scelbal_code.value += "440  C$=CHR$(176+DA+DB+CY-INT((DA+DB+CY)/10)*10)+C$\n";
+  form.scelbal_code.value += "450  CY=(DA+DB+CY)>9\n";
+  form.scelbal_code.value += "460 NEXT I\n";
+  form.scelbal_code.value += "470 IF CY>0 THEN C$='1'+C$\n";
+  form.scelbal_code.value += "480 RETURN\n";
+  form.scelbal_code.value += "500 REM DIG AT I\n";
+  form.scelbal_code.value += "510  DA=ASC(A$(:I;1))\n";
+  form.scelbal_code.value += "520  DA=DA-176\n";
+  form.scelbal_code.value += "530  DB=ASC(B$(:I;1))\n";
+  form.scelbal_code.value += "540  DA=DA-176\n";
+  form.scelbal_code.value += "550 RETURN\n";
+  form.scelbal_code.value += "600 REM PAD\n";
+  form.scelbal_code.value += "605  GOSUB 750\n";
+  form.scelbal_code.value += "610  IF LA<=LB GOTO 650\n";
+  form.scelbal_code.value += "620   B$='0'+B$\n";
+  form.scelbal_code.value += "630   LB=LB+1\n";
+  form.scelbal_code.value += "640   GOTO 610\n";
+  form.scelbal_code.value += "650  IF LA=LB THEN RETURN\n";
+  form.scelbal_code.value += "660   A$='0'+A$\n";
+  form.scelbal_code.value += "670   LA=LA+1\n";
+  form.scelbal_code.value += "680   GOTO 650\n";
+  form.scelbal_code.value += "750 REM LEN\n";
+  form.scelbal_code.value += "755  LA=LEN(A$)\n";
+  form.scelbal_code.value += "760  LB=LEN(B$)\n";
+  form.scelbal_code.value += "770 RETURN\n"; 
+}
 
 function loadplot(form) {
   console.log("loading plot");
@@ -17229,7 +17262,7 @@ produce_listing;if (!produce_listing) {form.list_button.value=&#39;Trace On&#39;
      </p>
     <p> PROGRAM SOURCE:
      <input name="mandel_button" value="load prime" onclick="loadprime(form);" align="middle" type="button">
-     <input name="gcf_button" value="load gcf" onclick="loadgcf(form);" align="middle" type="button">
+     <input name="fib_button" value="load fib" onclick="loadfib(form);" align="middle" type="button">
      <input name="fact_button" value="load 100!" onclick="loadfact(form);" align="middle" type="button">
      <input name="testfun_button" value="load testfun" onclick="loadtestfun(form);" align="middle" type="button">
      <input name="plot_button" value="load plot" onclick="loadplot(form);" align="middle" type="button">
