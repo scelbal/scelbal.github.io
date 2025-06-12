@@ -12,7 +12,7 @@ The renumber ("renumb") program is a longer example, which needs some explaining
 It makes rather heavy use of SCELBAL strings, offering evidence that programs that operate within
 SCELBAL's restrictions (no more than 64 strings, each no longer than 80 characters and every substring 
 within the range from one to the current length of the string) run properly and can do "practical" things.
-(I have to admit that SCELBAL with strings may malfunction when a user violates these restrictions; 
+(MGA: I have to admit that SCELBAL with strings may malfunction when a user violates these restrictions; 
 a user might expect that SCELBAL would simply print an error message and allow the user to proceed 
 without damaging the internal state of SCELBAL; instead excessivly long or out-of-bounds strings 
 may overwrite the machine language of SCELBAL, causing it to crash. 
