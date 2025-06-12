@@ -42,11 +42,13 @@ be used in larger programs, like parsers.
 
 <P>Before talking about how to run this program on the simulator, let's think about how it would have operated on 1970s 
 hardware.  A typical system of the era would have been attached to a model 33 Teletype.  In addition to a keyboard and a 
-print head that typed characters on rolls of continuous-feed paper, the ASR 33 had a paper-tape punch and paper-tape reader.
+print head that typed characters on rolls of continuous-feed paper (left photo), the ASR 33 had a paper-tape punch (middle photo) 
+and paper-tape reader (right photo).
 The paper tape features were normally turned off, but a user could push a button to turn on the punch.  Doing this right after 
-typing LIST would create a copy of the program on paper tape that could be read in later.  Doing this directly in SCELBAL simply loads
-the identical program back into memory.  The distinction with the renumber program is this paper tape is read into string INPUT statements
-that allow SCELBAL to transform it.  Like assemblers and compilers, the renumber program needs multiple (3) passes of the same input.
+typing LIST would create a copy of the program on paper tape that could be read in later.  
+Reading the tape this directly in SCELBAL simply loads the identical program back into memory.  
+The distinction with the renumber program is this paper tape is read into string INPUT statements that allow SCELBAL to transform it.  
+Like assemblers and compilers, the renumber program needs multiple (3) passes of the same input.
 The first pass identifies all the targets of GOTOs and such; the second pass notes what renumbered line those correspond to; the third pass
 reads and reprints the statements, only changing the line numbers.
 The paper tape needs to be manually restarted in the reader for each pass; just before the third pass, the user turns on the punch.  
