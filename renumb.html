@@ -51,17 +51,19 @@ The first pass identifies all the targets of GOTOs and such; the second pass not
 reads and reprints the statements, only changing the line numbers.
 The paper tape needs to be manually restarted in the reader for each pass; just before the third pass, the user turns on the punch.  
 Because the INPUT statement echos what is typed in, the prompt is preceeded by REM (which later will cause SCELBAL to ignore the old line).
-The final step is to SCR the renumber program, and load the newly punched renumbered program. 
-(Later personal computers offered disks and files so such passes happened faster without user intervention; no version of SCELBAL offered a file system.)   
+The final step is to type SCR to discard the renumber program, and load the newly punched renumbered program using the paper
+tape reader.  (Later personal computers offered disks and files so such passes happened faster without user intervention; 
+no version of SCELBAL offered a file system.)   
 </P>
-<p></p>To run this program on the simulator, click on "load renumb", click on RUN button; type LOAD which, like all other examples,
+<P>To run this program on the simulator, click on "load renumb", click on RUN button; type LOAD which, like all other examples,
 substitutes the source directly into SCELBAL.  Then type RUN.  There are two prompts for numbers.  The first the the starting line number you want; the second is the
 desired increment between line numbers.  These need to be under 10000.  Then there will be the REM prompt for the first line of pass 1.  Type LOAD again (assuming you
 want to renumber the renumber program;  if not pause the simulator and choose a different program).  When pass 1 completes, you will get another REM prompt for pass 2.  
 Type LOAD a second time (which is like starting the paper tape a second time).   Finally, type LOAD for pass 3.  Then stop the simulator and use your browser to search for "*****"
- which was printed at the start of pass 3.  Copy and paste the output from that point until the END statement at the bottom (this is like punching the new paper tape).  Paste it into the SOURCE window.
-  Restart the simulator, do SCR, LOAD and LIST to see the renumbered program.
-
+ which was printed at the start of pass 3.  Copy and paste the output from that point until the END statement at the bottom (this is like punching the new paper tape).  
+Paste it into the SOURCE window.
+Restart the simulator, and type SCR, LOAD and LIST to see the renumbered program.
+</P>
 <P>Restrictions are:  the input must be a valid SCELBAL program; 
 there must be no more than 32 distinct target line numbers 
 (although there is no restriction on the total number of lines in the program); 
