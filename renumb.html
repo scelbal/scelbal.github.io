@@ -52,7 +52,8 @@ Like assemblers and compilers, the renumber program needs multiple (3) passes of
 The first pass identifies all the targets of GOTOs and such; the second pass notes what renumbered line those correspond to; the third pass
 reads and reprints the statements, only changing the line numbers.
 The paper tape needs to be manually restarted in the reader for each pass; just before the third pass, the user turns on the punch.  
-Because the INPUT statement echos what is typed in, the prompt is preceeded by REM (which later will cause SCELBAL to ignore the old line).
+Because the INPUT statement echos what is typed in, the prompt is preceeded by REM 
+(which later will cause SCELBAL to ignore the old line that got punched onto the tape).
 The final step is to type SCR to discard the renumber program, and load the newly punched renumbered program using the paper
 tape reader.  (Later personal computers offered disks and files so such passes happened faster without user intervention; 
 no version of SCELBAL offered a file system.)   
