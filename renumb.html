@@ -57,7 +57,10 @@ Type LOAD a second time (which is like starting the paper tape a second time).  
  which was printed at the start of pass 3.  Copy and paste the output from that point until the END statement at the bottom (this is like the punch).  Paste it into the SOURCE window.
   Restart the simulator, do SCR, LOAD and LIST to see the renumbered program.
 
-<P>Restrictions are:  the input must be a valid SCELBAL program; there must be no more than 32 distinct target line numbers; the only occurance of THEN must be part of an 
+<P>Restrictions are:  the input must be a valid SCELBAL program; 
+there must be no more than 32 distinct target line numbers 
+(although there is no restriction on the total number of lines in the program); 
+the only occurance of THEN must be part of an 
 IF (for example, PRINT 'THEN' is not allowed, although PRINT 'THE'+'N' is OK) and
 the last line of the program must be an unconditional END (which triggers the start of a new pass). 
 </P>  
