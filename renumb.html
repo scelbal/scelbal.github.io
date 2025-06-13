@@ -12,7 +12,9 @@ The renumber ("renumb") program is a longer example, which needs some explaining
 It makes rather heavy use of SCELBAL strings, offering evidence that programs that operate within
 SCELBAL's restrictions (no more than 64 strings, each no longer than 80 characters and every substring 
 within the range from one to the current length of the string) run properly and can do "practical" things.
-(<i>MGA: I admit SCELBAL with strings may malfunction when a user violates these restrictions; 
+</p>
+<p>
+<i>MGA: I admit SCELBAL with strings may malfunction when a user violates these restrictions; 
 you might expect it would simply print an error without damaging the internal state of SCELBAL; 
 instead excessively long or out-of-bounds strings may overwrite machine language code, causing a crash. 
 Unlike the original SCELBAL, which had thousands of users some of whom submitted bug reports and fixes,
@@ -20,7 +22,7 @@ few users upgraded with the string supplement, and these bugs were not noticed a
 In the 2020s I investigated fixing these issues, as would have happened back in the day if users had noticed them, 
 but doing so would have required extensive machine language changes.  
 Instead, I decided to make available the version assembled by Ian Bartholomew, which only has 
-the patches published in the 1970s and works correctly as long as programs do not violate these restrictions.</i>)
+the patches published in the 1970s and works correctly as long as programs do not violate these restrictions.</i>
 </P>
 <P>
 SCELBAL, like other BASICs of the era, often requires using GOTOs to implement control structures.  
