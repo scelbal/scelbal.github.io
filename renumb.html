@@ -26,10 +26,10 @@ the patches published in the 1970s and works correctly as long as programs do no
 </P>
 <P>
 Why a renumber program? SCELBAL, like other BASICs of the era, often requires using GOTOs to implement control structures.  
-(Because SCELBAL allows the results of relations like 
+(Although SCELBAL allows results of relations like 
 (N3=0) and (N2=0) to be combined in an expression and allows THEN to conditionally execute a statement,
 many of the examples need relatively few GOTOs.)
-Interactive debugging such program in the 1970s often required inserting new numbered lines to a program.
+Interactive debugging programs with GOTOs in the 1970s often required inserting new numbered lines to a program.
 Standard practice was to initially number lines with room for additional lines, such as increments of ten.
 Eventually, this gets messy.  The renumber program takes an original messy SCELBAL program, and creates 
 an equivalent program with uniform line number spacing.  Doing this manually is rather time-consuming, tedious and error-prone.
