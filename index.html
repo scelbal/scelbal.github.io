@@ -24,7 +24,7 @@
 <p> This github site hosts a few variations of an 8008 simulator written in Javascript that run different versions of SCELBAL.  
 	The Javascript is a direct transliteration of 
 	SCELBAL code that emulates the 8008 (as can be seen by viewing the js source). 
-	The link(s) below emulate enough of the 8008 instruction set to run these versions of SCELBAL 
+	The links below emulate enough of the 8008 instruction set to run these versions of SCELBAL 
 	(the emulator lacks parity and restart, neither of which SCELBAL needs):
 </p>
 
@@ -35,9 +35,19 @@
 </p>
 
 <p>
+  <a href="https://scelbal.github.io/scel25.htm"> https://scelbal.github.io/scel25.htm</a> emulates the minimal (8K) published version 
+  (with bug patches) that offers floating-point variables, one-dimensional arrays and square root, 
+  but does not implement strings or transcendental functions.   Unlike scel24.htm, it follows the memory map of the book and uses patch regions in that map to implement a UDF that allows users to peek, poke and execute machine language functions (see the "load UDF" tab,   
+  <a href="https://scelbal.github.io/sc2025run.txt"> interactive commands</a> you can try, 
+  <a href="https://scelbal.github.io/sc2025.asm"> assembly</a>  
+  and <a href="https://scelbal.github.io/sc2025.lst"> listing</a>). 
+</p>
+
+<p>
   <a href="https://scelbal.github.io/scelstrmath24.htm"> https://scelbal.github.io/scelstrmath24.htm</a> emulates the full (16K) 
 	version, upgraded with the "String Supplement" and "Math Supplement" (SIN(X), COS(X), ATN(X), EXP(X) and LOG(X)).  
 </p>
+
 
 <p> Some hints:
  
